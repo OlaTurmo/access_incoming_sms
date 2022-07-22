@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:permission_handler/permission_handler.dart';
-import 'package:read_sms/platform_channel.dart';
+import 'package:access_incoming_sms/platform_channel.dart';
 
 void main() {
   runApp(const MyApp());
@@ -15,50 +15,26 @@ class MyApp extends StatefulWidget {
 
 class _MyAppState extends State<MyApp> {
   String sms = 'No sms';
-  String call = 'No call';
 
   @override
   void initState() {
     super.initState();
-    //
-    // getSmsPermission().then((value) {
-    //   if (value) {
-    //     PlatformChannel().smsStream().listen((event) {
-    //       sms = event;
-    //       setState(() {});
-    //     });
-    //   }
-    // });
 
-    getPhonePermission().then((value) {
+    getPermission().then((value) {
       if (value) {
         PlatformChannel().smsStream().listen((event) {
-          call = event;
-          print("telefon: ${event}");
+          sms = event;
           setState(() {});
         });
       }
     });
   }
 
-
-  Future<bool> getSmsPermission() async {
+  Future<bool> getPermission() async {
     if (await Permission.sms.status == PermissionStatus.granted) {
       return true;
     } else {
       if (await Permission.sms.request() == PermissionStatus.granted) {
-        return true;
-      } else {
-        return false;
-      }
-    }
-  }
-
-  Future<bool> getPhonePermission() async {
-    if (await Permission.contacts.status == PermissionStatus.granted) {
-      return true;
-    } else {
-      if (await Permission.contacts.request() == PermissionStatus.granted) {
         return true;
       } else {
         return false;
@@ -71,28 +47,27 @@ class _MyAppState extends State<MyApp> {
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(
-          title: const Text('Read Sms and Call'),
+          title: Center(child: const Text('SMS Reader')),
+          backgroundColor: Colors.greenAccent,
         ),
-        body: SizedBox(
-          width: double.infinity,
+        body: Center(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               const Text(
-                'Incoming message -',
-                style: TextStyle(fontSize: 24),
+                'Incoming message:',
+                style: TextStyle(
+                    fontSize: 24,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.greenAccent),
               ),
-              const SizedBox(height: 16),
-              Text(sms),
-              const SizedBox(
-                height: 20,
+              const SizedBox(height: 18),
+              Text(
+                sms,
+                style: const TextStyle(
+                    fontSize: 18,
+                    color: Colors.blue),
               ),
-              const Text(
-                'Incoming call -',
-                style: TextStyle(fontSize: 24),
-              ),
-              const SizedBox(height: 16),
-              Text(call),
             ],
           ),
         ),
