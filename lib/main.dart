@@ -68,6 +68,95 @@ class _MyAppState extends State<MyApp> {
                     fontSize: 18,
                     color: Colors.blue),
               ),
+              
+              String gfg = "rs.ge (s/n an p/n) 305516536: 8516 kods vada gasdis 5 wuTSi";
+  String result = gfg;
+              gfg = sms;
+  
+	print(gfg.toLowerCase());
+  gfg = result;
+  
+  result = gfg.replaceAll("TS","ც");
+gfg = result;
+  
+    result = gfg.replaceAll("ts","ც");
+gfg = result;
+  
+  
+   result = gfg.replaceAll("w","ვ");
+gfg = result;
+  
+  result = gfg.replaceAll("a","ა");
+gfg = result;
+  result = gfg.replaceAll("b","ბ");
+gfg = result;
+  result = gfg.replaceAll("g","გ");
+gfg = result;  
+  result = gfg.replaceAll("d","დ");
+ gfg = result; 
+  result = gfg.replaceAll("e","ე");
+gfg = result;
+  result = gfg.replaceAll("v","ვ");
+gfg = result;
+  result = gfg.replaceAll("z","ზ");
+gfg = result;
+  result = gfg.replaceAll("t","თ");
+gfg = result;
+  result = gfg.replaceAll("i","ი");
+gfg = result;
+  result = gfg.replaceAll("kʼ","კ");
+gfg = result;
+  result = gfg.replaceAll("l","ლ");
+gfg = result;
+  result = gfg.replaceAll("m","მ");
+gfg = result;
+  result = gfg.replaceAll("n","ნ");
+gfg = result;
+  result = gfg.replaceAll("o","ო");
+gfg = result;
+  result = gfg.replaceAll("pʼ","პ");
+gfg = result;
+  result = gfg.replaceAll("zh","ჟ");
+gfg = result;
+  result = gfg.replaceAll("r","რ");
+gfg = result;
+  result = gfg.replaceAll("s","ს");
+gfg = result;
+  result = gfg.replaceAll("tʼ","ტ");
+gfg = result;
+  result = gfg.replaceAll("u","უ");
+gfg = result;
+  result = gfg.replaceAll("p","ფ");
+gfg = result;
+  result = gfg.replaceAll("k","ქ");
+gfg = result;
+  result = gfg.replaceAll("gh","ღ");
+gfg = result;
+  result = gfg.replaceAll("qʼ","ყ");
+gfg = result;
+  result = gfg.replaceAll("sh","შ");
+gfg = result;
+  result = gfg.replaceAll("ch","ჩ");
+gfg = result;
+
+  result = gfg.replaceAll("dz","ძ");
+gfg = result;
+  result = gfg.replaceAll("tsʼ","წ");
+gfg = result;
+  result = gfg.replaceAll("chʼ","ჭ");
+gfg = result;
+  result = gfg.replaceAll("kh","ხ");
+gfg = result;
+  result = gfg.replaceAll("j","ჯ");
+gfg = result;
+  result = gfg.replaceAll("h","ჰ");
+gfg = result;
+ 
+  print(gfg);
+  
+              
+              
+              
             ],
           ),
         ),
