@@ -162,11 +162,11 @@ gfg = result;
 
   // Passing the translation to a variable
   var translation = await translator
-      .translate("I would buy a car, if I had money.", from: 'ka', to: 'en');
+      .translate(gfg, from: 'ka', to: 'en');
 
   // You can also call the extension method directly on the input
  // print('Translated: ${await input.translate(to: 'en')}');         
-     print(.translate);         
+      print("translation: $translation");  
               
             ],
           ),
