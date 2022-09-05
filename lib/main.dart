@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:permission_handler/permission_handler.dart';
 import 'package:access_incoming_sms/platform_channel.dart';
-import 'package:access_incoming_sms/translator.dart';
+import 'package:access_incoming_sms/src/google_translator.dart';
+import 'package:access_incoming_sms/src/extension.dart';
+
 
 void main() {
   runApp(const MyApp());
