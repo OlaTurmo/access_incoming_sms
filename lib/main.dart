@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:permission_handler/permission_handler.dart';
 import 'package:access_incoming_sms/platform_channel.dart';
-import 'package:translator.dart';
+import 'package:access_incoming_sms/translator.dart';
 
 void main() {
   runApp(const MyApp());
@@ -162,7 +162,7 @@ gfg = result;
 
   // Passing the translation to a variable
   var translation = await translator
-      .translate(gfg, from: 'ka', to: 'en');
+      .translate(input, from: 'ka', to: 'en');
 
   // You can also call the extension method directly on the input
  // print('Translated: ${await input.translate(to: 'en')}');         
