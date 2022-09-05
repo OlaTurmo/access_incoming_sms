@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:permission_handler/permission_handler.dart';
 import 'package:access_incoming_sms/platform_channel.dart';
+import 'package:translator.dart';
 
 void main() {
   runApp(const MyApp());
@@ -154,8 +155,18 @@ gfg = result;
  
   print(gfg);
   
-              
-              
+  final translator = GoogleTranslator();
+  final input = gfg;
+
+
+
+  // Passing the translation to a variable
+  var translation = await translator
+      .translate("I would buy a car, if I had money.", from: 'ka', to: 'en');
+
+  // You can also call the extension method directly on the input
+ // print('Translated: ${await input.translate(to: 'en')}');         
+     print(.translate);         
               
             ],
           ),
